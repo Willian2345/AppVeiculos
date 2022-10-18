@@ -2,7 +2,7 @@
 @section('content')
 <section>
 <div class="container cadastroCaminhao">
-<form class="row g-3" method="post" action="{{route('SalvarBanco')}}">
+<form class="row g-3" method="post" action="{{route('salvar-banco')}}">
   @csrf
   <div class="col-md-12">
     <label for="inputModelo" class="form-label">Modelo</label>
@@ -15,7 +15,7 @@
   </div>
   <div class="col-12">
     <label for="inputAno" class="form-label">Ano</label>
-    <input type="text" name="ano" class="form-control" id="inputAno" placeholder="2000">
+    <input type="text" name="ano" class="form-control" id="inputAno" placeholder="6969">
   </div>
   <div class="col-md-12">
     <label for="inputCor" class="form-label">Cor</label>

@@ -2,12 +2,12 @@
 @section('content')
 <section>
     <div class="container cadastro">
-      <H3>Cadastro Carros</H3>
+      <H3>Cadastro Caminhão</H3>
       <form class="row g-3" method="post" action="{{route('salvar-banco')}}">
         @csrf
         <div class="col-md-12">
           <label for="inputModelo" class="form-label">Modelo</label>
-          <input type="text" name="modelos" class="form-control" id="inputModelo" placeholder="HX-700">
+          <input type="text" name="modelos" value="{{old('modelo',$registrosCaminhoes->id)}}" class="form-control" id="inputModelo" placeholder="HX-700">
           @error('modelos')
           <div class="text-danger">
             *Preencher o campo <b>MODELO</b>!!

@@ -25,13 +25,22 @@ class CaminhaoController extends Controller
     'marca' => 'string|required',
     'ano' => 'string|required',
     'cor' => 'string|required',
-    'valor' => 'string|nullable'
+    'valor' => 'string|required'
 
     ]);
 
    Caminhaos::create($dadosCaminhao);
 
     return Redirect::route('home');
+}
+
+public function ApagaBancoCaminhao(Caminhaos $registrosCaminhoes){
+   //dd($registrosCaminhoes);
+   $registrosCaminhoes->delete();
+
+   return Redirect::route('editar-caminhao');
+
+
 }
 
 }

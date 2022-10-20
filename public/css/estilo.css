@@ -1,0 +1,45 @@
+body{
+    background-color: white;
+
+}
+
+.card{
+    width: 500px;
+    height: 500px;
+}
+
+
+.cadastro {
+    background-color: rgb(33, 37, 41);
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 3%;
+    margin-left: 35%;
+    width: 400px;
+    border-radius: 5%;
+    color: white;
+}
+
+.botaoCadastro {
+
+    margin-top: 10%;
+
+    text-align: center;
+
+}
+
+
+/* ##### RODAPÉ ##### */
+
+footer{
+    
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-weight: bolder;
+        clear: both;
+     
+    }
+

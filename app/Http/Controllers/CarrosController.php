@@ -25,13 +25,20 @@ class CarrosController extends Controller
     'marca' => 'string|required',
     'ano' => 'string|required',
     'cor' => 'string|required',
-    'valor' => 'string|nullable'
+    'valor' => 'string|required'
 
     ]);
 
-   Carros::create($dadosCarros);
+    Carros::create($dadosCarros);
 
     return Redirect::route('home');
-}
-
+    }
+    
+    public function ApagaBancoCarro(Carros $registrarCarros){
+        //dd($registrosCarro
+        $registrarCarros->delete();
+     
+        return Redirect::route('editar-carros');
+     
+     }
 }

@@ -14,8 +14,8 @@ class CarrosController extends Controller
 
     public function MostrarEditarCarros(){
         $dadosCarros = Carros::all();
-        return view('editarCarros');
-        return view('editarCarros',['registrosCarros' => $dadosCarros]);
+
+        return view('editarCarros',['registrosCarro' => $dadosCarros]);
     }
 
     public function SalvarBancoCarros(Request $request){
@@ -34,11 +34,25 @@ class CarrosController extends Controller
     return Redirect::route('home');
     }
     
-    public function ApagaBancoCarro(Carros $registrarCarros){
+    public function ApagaBancoCarro(Carros $registrosCarros){
         //dd($registrosCarro
-        $registrarCarros->delete();
+        $registrosCarros->delete();
      
         return Redirect::route('editar-carros');
      
      }
+
+     public function Mostrar()
+     {
+         return view('listar-carros');
+         
+     }
+
+     public function MostrarAlterarCarros(Carros $registrosCarros)
+
+    {
+        return view('alterarCarros', ['registrosCarros' => $registrosCarros]);
+
+    }
 }
+

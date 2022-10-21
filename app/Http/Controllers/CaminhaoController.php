@@ -43,4 +43,16 @@ public function ApagaBancoCaminhao(Caminhaos $registrosCaminhoes){
 
 }
 
+public function MostrarCaminhao()
+     {
+         return view('listar-caminhao');
+         
+     }
+
+     public function MostrarAlterarCaminhao(Caminhaos $registrosCaminhoes)
+
+    {
+        return view('alterarCaminhao', ['registrosCaminhoes' => $registrosCaminhoes]);
+
+    }
 }

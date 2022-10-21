@@ -3,12 +3,12 @@
 <section>
     <div class="container cadastro">
       <H3>Cadastro Carros</H3>
-      <form class="row g-3" method="post" action="{{route('salvar-banco')}}">
+      <form class="row g-3" method="post" action="{{route('salvar-banco-carros')}}">
         @csrf
         <div class="col-md-12">
           <label for="inputModelo" class="form-label">Modelo</label>
-          <input type="text" name="modelos" class="form-control" id="inputModelo" placeholder="HX-700">
-          @error('modelos')
+          <input type="text" name="modelo" class="form-control" id="inputModelo" placeholder="HX-700">
+          @error('modelo')
           <div class="text-danger">
             *Preencher o campo <b>MODELO</b>!!
           </div>

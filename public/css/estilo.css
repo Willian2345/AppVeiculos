@@ -1,12 +1,14 @@
+
+
 body{
     background-color: white;
+    width: 100%;
+    height: auto;
 
 }
 
-.card{
-    width: 500px;
-    height: 500px;
-}
+
+
 
 
 .cadastro {
@@ -29,6 +31,15 @@ body{
 }
 
 
+
+
+
+
+/* ##### RODAPÉ ##### */
+
+
+
+
 /* ##### RODAPÉ ##### */
 
 footer{
@@ -40,6 +51,7 @@ footer{
         padding-bottom: 30px;
         font-weight: bolder;
         clear: both;
+
      
     }
 

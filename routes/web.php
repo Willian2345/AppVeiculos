@@ -38,3 +38,4 @@ Route::get('/alterar-caminhao/{registrosCaminhoes}',[CaminhaoController::class,'
 Route::get('/alterar-carro/{registrosCarros}',[CarrosController::class,'MostrarAlterarCarros'])->name('alterar-carro');
 Route::get('/listar-carros',[CarrosController::class,'Mostrar'])->name('listar-carros');
 Route::get('/listar-caminhao',[CaminhaoController::class,'MostrarCaminhao'])->name('listar-caminhao');
+Route::put('/editar-caminhao/{registrosCaminhoes}',[CaminhaoController::class,'AlterarBancoCaminhao'])->name('alterar-banco-caminhao');

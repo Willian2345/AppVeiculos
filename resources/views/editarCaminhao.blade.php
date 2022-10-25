@@ -4,14 +4,18 @@
 
 <div class="container m-5" >
 
+<form method="get"  action="/editar-caminhao">
 <div class="row center">
+  
+
   <div class="col">
-    <input type="text" class="form-control" placeholder="Digite a Marca do Caminhão" aria-label="First name">
+    <input type="text"id="marca" name = "marca" class="form-control" placeholder="Digite a Marca do Caminhão" aria-label="First name">
   </div>
 
   <div class="col">
-  <button type="button" class="btn btn-info">Buscar</button>
+  <button type="submit" class="btn btn-info">Buscar</button>
   </div>
+</form>
 </div>
 
 

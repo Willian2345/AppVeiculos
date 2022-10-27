@@ -12,11 +12,18 @@ class CarrosController extends Controller
         return view('cadastrarCarros');
     }
 
-    public function MostrarEditarCarros(){
-        $dadosCarros = Carros::all();
-
-        return view('editarCarros',['registrosCarro' => $dadosCarros]);
-    }
+    public function MostrarEditarCarros(Request $request){
+        $dadosCarros = Carros::query();
+        $dadosCarros->when($request->marca,function($query, $vl){
+         $query->where('marca','like','%' .$vl);
+ 
+        });
+ 
+        $dadosCarros = $dadosCarros->get();
+        //dd($dadosCaminhao)
+         return view('editarCarros',['registrosCarro' => $dadosCarros]);
+     }
+ 
 
     public function SalvarBancoCarros(Request $request){
 
@@ -42,11 +49,7 @@ class CarrosController extends Controller
      
      }
 
-     public function Mostrar()
-     {
-         return view('listar-carros');
-         
-     }
+    
 
      public function MostrarAlterarCarros(Carros $registrosCarros)
 

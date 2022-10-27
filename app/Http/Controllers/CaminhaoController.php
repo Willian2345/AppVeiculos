@@ -15,7 +15,7 @@ class CaminhaoController extends Controller
    public function MostrarEditarCaminhao(Request $request){
        $dadosCaminhao = Caminhaos::query();
        $dadosCaminhao->when($request->marca,function($query, $vl){
-        $query->where('marca','like','%', $vl);
+        $query->where('marca','like','%' .$vl);
 
        });
 
